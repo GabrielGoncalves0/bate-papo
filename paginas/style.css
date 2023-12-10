@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #070708;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #18181d;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  border: none;
+  background-color: 111112;
+  box-sizing: border-box;
+}
+
+input:focus {
+    outline-width: 2px;
+    outline-color: #974cfa;
+    outline-style: solid;
+}
+
+button {
+  background-color: #974cfa;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7b18fd;
+}
+
+#listar-mensagem {
+  width: 600px;
+  height: 300px;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "bate-papo",
+  "version": "1.0.0",
+  "description": "Criação de aplicação de bate papo",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielGoncalves0/bate-papo.git"
+  },
+  "keywords": [
+    "POST",
+    "HTTP",
+    "Session",
+    "Cookies"
+  ],
+  "author": "Gabriel Rodrigues",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3"
+  }
+}
