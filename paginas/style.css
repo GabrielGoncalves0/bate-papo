@@ -16,6 +16,15 @@ body {
   color: white;
 }
 
+.container-menu {
+  background-color: #18181d;
+  width: 300px;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
 label {
   display: block;
   margin-bottom: 8px;
@@ -53,4 +62,22 @@ button:hover {
 #listar-mensagem {
   width: 600px;
   height: 300px;
+}
+
+#usuarios {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+.menu-cadastro {
+  text-decoration: none;
+  margin-bottom: 15px;
+  color: #974cfa;
+}
+
+.menu-cadastro:hover {
+  color: #7b18fd;
 }
