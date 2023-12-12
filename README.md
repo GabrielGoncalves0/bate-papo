@@ -1,6 +1,6 @@
 > Status: Pronto
 
-### É uma aplicação web planejada por mim, onde crio um bate papo utilizando Node.js e express
+### É uma aplicação web desenvolvida para fins academicos, onde crio um bate papo utilizando Node.js e express
 
 ## Os campos no modelo principal são:
 
