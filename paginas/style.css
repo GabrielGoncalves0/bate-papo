@@ -62,6 +62,7 @@ button:hover {
 #listar-mensagem {
   width: 600px;
   height: 300px;
+  padding: 15px;
 }
 
 #usuarios {
@@ -80,4 +81,19 @@ button:hover {
 
 .menu-cadastro:hover {
   color: #7b18fd;
+}
+
+#rodape {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rodape-link {
+  background-color: #974cfa;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }

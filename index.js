@@ -116,7 +116,12 @@ function autenticar(req, res, next) {
     } else {
         res.redirect("/login.html");
     }
-}  
+}
+
+function realizarLogout(req, res) {
+    req.session.usuarioAutenticado = false;
+    res.redirect('/login.html');
+}
 
 const app = express();
 
@@ -171,7 +176,7 @@ app.get('/', autenticar, (req, res) => {
     }
 
     conteudoResposta += `
-                        </select>
+                    </select>
                         </div>
                         <div>
                             <label for="mensagem">Digite sua mensagem:</label>
@@ -179,30 +184,25 @@ app.get('/', autenticar, (req, res) => {
                         </div>
                         <button type="submit">Enviar Mensagem</button>
                     </form>
-                    <br />
-    `;
+                    <br />`;
 
-    conteudoResposta += `
-            <textarea id="listar-mensagem" name="listar-mensagem" readonly>      
-    `;
+    conteudoResposta += `<textarea id="listar-mensagem" name="listar-mensagem" readonly>`;
 
     for (const mensagem of listaMensagens) {
-        conteudoResposta += `${mensagem.usuario}: ${mensagem.mensagem}  \n  ${mensagem.dataHora} \n\n`;
+        conteudoResposta += `${mensagem.usuario} : ${mensagem.mensagem}  \n  ${mensagem.dataHora} \n\n`;
     }
 
     conteudoResposta += `
             </textarea>
         </body>
-        <footer>
+        <footer id="rodape">
+            <a id="rodape-link" href="/logout">Logout</a>    
             <p> Seu último acesso foi em ${dataUltimoAcesso}</p>
         </footer>
     </html>
     `;
     res.end(conteudoResposta);
 });
-
-
-
 
 app.post('/login', (req, res) => {
     const usuario = req.body.usuario;
@@ -227,7 +227,8 @@ app.post('/login', (req, res) => {
     }
 });
 
-//rota para processar o cadastro de usuários endpoint = '/cadastrarUsuario'
+app.get('/logout', autenticar, realizarLogout);
+
 app.post('/cadastrarUsuario', autenticar, processaCadastroUsuario);
 
 app.post('/enviarMensagem', autenticar, (req, res) => {
@@ -235,9 +236,8 @@ app.post('/enviarMensagem', autenticar, (req, res) => {
     const mensagem = req.body.mensagem;
     const dataHora = new Date().toLocaleString();
 
-    // Armazena a mensagem no array
     listaMensagens.push({ usuario: usuarioSelecionado, mensagem, dataHora});
-    // Redireciona de volta à página principal
+
     res.redirect('/');
 });
 
