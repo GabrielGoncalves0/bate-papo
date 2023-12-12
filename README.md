@@ -1,6 +1,6 @@
 > Status: Pronto
 
-### É uma aplicação web desenvolvida para fins academicos, onde crio um bate papo utilizando Node.js e express
+### É uma aplicação web desenvolvida para fins acadêmicos. Esta atividade tem como objetivo a criação de um bate-papo. Vale ressaltar que não foi utilizado um banco de dados nem o Socket.io para realizar a autenticação do usuario logado.
 
 ## Os campos no modelo principal são:
 
